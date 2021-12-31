@@ -1,6 +1,6 @@
 """
 This module is an attempt at creating an easy-to-use
-Morse Code <-> English dictionary. Equipped with breaks and all.
+English to Morse code converter
 
 kward
 """
