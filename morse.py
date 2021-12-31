@@ -5,7 +5,7 @@ English to Morse code converter
 kward
 """
 import time
-import winsound
+#import winsound
 
 # Morse code class
 class MorseCode:
@@ -15,21 +15,18 @@ class MorseCode:
         self.freq = freq
         self.dot_dur = dot_dur
         self.dash_dur = dash_dur
-        self.letter_space_dur = 0.2
-        
-        # Dictionary of morse code letters
-        self.letters = {
-            'a': self.a
-        
-        }
+        self.letter_space_dur = 0.3
+        self.alphabet = "abcdefghijklmnopqrstuvwxyz"
         
     # Play dot sound
     def dot(self):
-        winsound.Beep(self.freq, self.dot_dur)
+        pass
+        #winsound.Beep(self.freq, self.dot_dur)
 
     # Play dash sound
     def dash(self):
-        winsound.Beep(self.freq, self.dash_dur)
+        pass
+        #winsound.Beep(self.freq, self.dash_dur)
         
     """ Letter Functions """
     def a(self):
@@ -37,7 +34,7 @@ class MorseCode:
         self.dash()
 
         # Sleep before next letter
-        time.sleep(self.letter_space_dur)
+        #time.sleep(self.letter_space_dur)
 
         # Return letter as array of beep durations
         return [self.dot_dur, self.dash_dur]
@@ -47,7 +44,7 @@ class MorseCode:
         [self.dot() for i in range(0,3)]
         
         # Sleep before next letter
-        time.sleep(self.letter_space_dur)
+        #time.sleep(self.letter_space_dur)
         
         return [self.dash_dur,self.dot_dur,self.dot_dur,self.dot_dur]
         
@@ -58,7 +55,7 @@ class MorseCode:
         self.dot()
         
         # Sleep before next letter
-        time.sleep(self.letter_space_dur)
+        #time.sleep(self.letter_space_dur)
         
         return [self.dash_dur,self.dot_dur,self.dash_dur,self.dot_dur]
     
@@ -68,7 +65,7 @@ class MorseCode:
         self.dot()
         
         # Sleep before next letter
-        time.sleep(self.letter_space_dur)
+        #time.sleep(self.letter_space_dur)
         
         return [self.dash_dur,self.dot_dur,self.dot_dur]
     
@@ -76,7 +73,7 @@ class MorseCode:
         self.dot()
         
         # Sleep before next letter
-        time.sleep(self.letter_space_dur)
+        #time.sleep(self.letter_space_dur)
         
         return [self.dot_dur]
     
@@ -87,7 +84,7 @@ class MorseCode:
         self.dot()
         
         # Sleep before next letter
-        time.sleep(self.letter_space_dur)
+        #time.sleep(self.letter_space_dur)
         
         return [self.dot_dur,self.dot_dur,self.dash_dur,self.dot_dur]
     
@@ -97,7 +94,7 @@ class MorseCode:
         self.dot()
         
         # Sleep before next letter
-        time.sleep(self.letter_space_dur)
+        #time.sleep(self.letter_space_dur)
         
         return [self.dash_dur,self.dash_dur,self.dot_dur]
     
@@ -105,7 +102,7 @@ class MorseCode:
         [self.dot() for i in range(0,4)]
         
         # Sleep before next letter
-        time.sleep(self.letter_space_dur)
+        #time.sleep(self.letter_space_dur)
         
         return [self.dot_dur for i in range(0,4)]
     
@@ -114,7 +111,7 @@ class MorseCode:
         self.dot()
         
         # Sleep before next letter
-        time.sleep(self.letter_space_dur)
+        #time.sleep(self.letter_space_dur)
         
         return [self.dot_dur,self.dot_dur]
     
@@ -123,7 +120,7 @@ class MorseCode:
         [self.dash() for i in range(0,3)]
         
         # Sleep before next letter
-        time.sleep(self.letter_space_dur)
+        #time.sleep(self.letter_space_dur)
         
         return [self.dot_dur,self.dash_dur,self.dash_dur,self.dash_dur]
 
@@ -133,7 +130,7 @@ class MorseCode:
         self.dash()
         
         # Sleep before next letter
-        time.sleep(self.letter_space_dur)
+        #time.sleep(self.letter_space_dur)
         
         return [self.dash_dur,self.dot_dur,self.dash_dur]
     
@@ -144,7 +141,7 @@ class MorseCode:
         self.dot()
         
         # Sleep before next letter
-        time.sleep(self.letter_space_dur)
+        #time.sleep(self.letter_space_dur)
         
         return [self.dot_dur,self.dash_dur,self.dot_dur,self.dot_dur]
     
@@ -153,7 +150,7 @@ class MorseCode:
         self.dash()
 
         # Sleep before next letter
-        time.sleep(self.letter_space_dur)
+        #time.sleep(self.letter_space_dur)
 
         return[self.dash_dur, self.dash_dur]
         
@@ -162,7 +159,7 @@ class MorseCode:
         self.dot()
 
         # Sleep before next letter
-        time.sleep(self.letter_space_dur)
+        #time.sleep(self.letter_space_dur)
 
         return [self.dash_dur, self.dot_dur]
 
@@ -170,7 +167,7 @@ class MorseCode:
         [self.dash() for i in range(0,3)]
 
         # Sleep before next letter
-        time.sleep(self.letter_space_dur)
+        #time.sleep(self.letter_space_dur)
 
         return [self.dash_dur for i in range(0,3)]
 
@@ -181,7 +178,7 @@ class MorseCode:
         self.dot()
 
         # Sleep before next letter
-        time.sleep(self.letter_space_dur)
+        #time.sleep(self.letter_space_dur)
 
         return [self.dot_dur,self.dash_dur,self.dash_dur,self.dot_dur]
 
@@ -192,7 +189,7 @@ class MorseCode:
         self.dash()
 
         # Sleep before next letter
-        time.sleep(self.letter_space_dur)
+        #time.sleep(self.letter_space_dur)
 
         return [self.dash_dur,self.dash_dur,self.dot_dur,self.dash_dur]
 
@@ -202,7 +199,7 @@ class MorseCode:
         self.dot()
 
         # Sleep before next letter
-        time.sleep(self.letter_space_dur)
+        #time.sleep(self.letter_space_dur)
 
         return [self.dot_dur,self.dash_dur,self.dot_dur]
 
@@ -210,7 +207,7 @@ class MorseCode:
         [self.dot() for i in range(0,3)]
 
         # Sleep before next letter
-        time.sleep(self.letter_space_dur)
+        #time.sleep(self.letter_space_dur)
 
         return [self.dot_dur for i in range(0,3)]
 
@@ -218,7 +215,7 @@ class MorseCode:
         self.dash()
 
         # Sleep before next letter
-        time.sleep(self.letter_space_dur)
+        #time.sleep(self.letter_space_dur)
 
         return [self.dash_dur]
 
@@ -228,7 +225,7 @@ class MorseCode:
         self.dash()
 
         # Sleep before next letter
-        time.sleep(self.letter_space_dur)
+        #time.sleep(self.letter_space_dur)
 
         return [self.dot_dur,self.dot_dur,self.dash_dur]
 
@@ -237,7 +234,7 @@ class MorseCode:
         self.dash()
 
         # Sleep before next letter
-        time.sleep(self.letter_space_dur)
+        #time.sleep(self.letter_space_dur)
 
         return [self.dot_dur,self.dot_dur,self.dot_dur,self.dash_dur]
 
@@ -247,7 +244,7 @@ class MorseCode:
         self.dash()
 
         # Sleep before next letter
-        time.sleep(self.letter_space_dur)
+        #time.sleep(self.letter_space_dur)
 
         return [self.dot_dur,self.dash_dur,self.dash_dur]
 
@@ -258,7 +255,7 @@ class MorseCode:
         self.dash()
 
         # Sleep before next letter
-        time.sleep(self.letter_space_dur)
+        #time.sleep(self.letter_space_dur)
 
         return [self.dash_dur,self.dot_dur,self.dot_dur,self.dash_dur]
 
@@ -269,7 +266,7 @@ class MorseCode:
         self.dash()
 
         # Sleep before next letter
-        time.sleep(self.letter_space_dur)
+        #time.sleep(self.letter_space_dur)
 
         return [self.dash_dur,self.dot_dur,self.dash_dur,self.dash_dur]
 
@@ -280,7 +277,7 @@ class MorseCode:
         self.dot()
 
         # Sleep before next letter
-        time.sleep(self.letter_space_dur)
+        #time.sleep(self.letter_space_dur)
 
         return [self.dash_dur,self.dash_dur,self.dot_dur,self.dot_dur]
 
@@ -291,7 +288,7 @@ class MorseCode:
         encoded = []
 
         # Letter function template
-        func = lambda x: f"self.{x}()"
+        func = lambda x: getattr(self, x)()
 
         # Split message
         msg = message.split()
@@ -308,8 +305,12 @@ class MorseCode:
 
                 # Loop through each letter in the word
                 for letter in word_arr:
+                    # Check if letter is in alphabet
+                    if not letter in self.alphabet:
+                        return "ERROR in MorseCode.say(): '" + str(letter) + "' is not a supported character"
+                    
                     # Call letter function
-                    res = eval(func(letter))
+                    res = func(letter)
 
                     # Add letter codes to list
                     letter_codes.append(res)
@@ -323,10 +324,11 @@ class MorseCode:
 
             # Loop through each letter in the message
             for letter in msg_arr:
-                res = eval(func(letter))
+                res = func(letter)
 
                 # Add letter to encoded message
                 encoded.append(res)
 
             
         return encoded
+    
